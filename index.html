@@ -4,164 +4,176 @@
     <title>CBC | Digital Requests</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src="/js/scripts_styles.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/js/jquery.tools.min.js"></script>
-    <script src="/js/dr.js"></script>
+    <script src="./js/jquery.tools.min.js"></script>
+    <script src="./js/dr.js"></script>
     
-        <!--[if lt IE 9]>
+    <!--[if lt IE 9]>
         <link rel="stylesheet" href="./css/IEonly.css"/>
         <![endif]-->
-
+	
     <link rel="stylesheet" href="/css/css_r/firm.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="/css/css_r/cofs.css" type="text/css" media="screen" />
 
     <style type="text/css">
+
+      body {
+      		font-family : Arial, Helvetica, sans-serif;
+      }
+      </style>
+	
+    <style type="text/css">
       
       .banner-name {
-		font-weight : bold;
+	  font-weight : bold;
       }
 
       #drf-container {
-		width : 922px;
-      	border : 1px solid #ccc;
-     	height : 400px;
-      	margin-top : 20px;
-        padding : 20px;
+	  width : 922px;
+      border : 1px solid #ccc;
+      height : 400px;
+      margin-top : 20px;
+      padding : 20px;
       }
-
+	  
       .scrollable {
-      	background : url('/img/white_50.png');
-      	overflow : hidden;
-		width : 922px;
-      	height : 350px;
-      	border : solid 1px #ccc;
-      	position : relative;
-        margin-top : 20px;
+      background : url('./img/white_50.png');
+      overflow : hidden;
+	  width : 922px;
+      height : 350px;
+      border : solid 1px #ccc;
+      position : relative;
+      margin-top : 20px;
       }
-
+	  
       .scrollable .items {
-		position : absolute;
-        width : 3688px;
+	  position : absolute;
+      width : 4610px;
       }
 
       .items .si {
-          float : left;
-      	  padding : 20px;
-          width : 882px;
-          position : relative;
+      float : left;
+      padding : 20px;
+      width : 882px;
+      position : relative;
       }
-
+	  
       .section-title {
-		margin-left : 20px;
+	  margin-left : 20px;
       }
-
+	  
       .question {
-		font-size : 18px;
-        margin-bottom : 20px;
+	  font-size : 18px;
+      margin-bottom : 20px;
       }
-
+	  
       .question-med {
-      	font-size : 17px;
-      	margin-bottom : 20px;
+      font-size : 17px;
+      margin-bottom : 20px;
       }
 
       #p1_body, .q_body {
-      	position : absolute;
-      	top : 80px;
-      	left : 100px;   
+      position : absolute;
+      top : 80px;
+      left : 100px;   
       }
-
+	  
       .opt-chk, opt-chk2 {
-		list-style-type : none;
-        margin-bottom : 20px;
+	  list-style-type : none;
+      margin-bottom : 20px;
       }
 
       .opt-chk li, .opt-chk2 li {
-          display: inline-block;
-          font-size : 16px;
-          zoom : 1;
-          *display : inline;
+      display: inline-block;
+      font-size : 16px;
+      zoom : 1;
+      *display : inline;
       }
       
       .opt-chk li {
-          padding : 30px 25px;
-          border : 2px solid #999;
-          margin-right: 20px;
-          border-radius : 8px;
-          text-align : center;
+      padding : 30px 25px;
+      border : 2px solid #999;
+      margin-right: 20px;
+      border-radius : 8px;
+      text-align : center;
       }
-
+	  
       .opt-chk2 .oc2-cb {
-          border : none;
-          width : 30px;
-          height : 30px;
-          border-radius : 15px;
-          background-color : #C9D0DA;
-          display : inline-block;
-          zoom : 1;
-          *display : inline;
+      border : none;
+      width : 30px;
+      height : 30px;
+      border-radius : 15px;
+      background-color : #C9D0DA;
+      display : inline-block;
+      zoom : 1;
+      *display : inline;
       }
 
       .opt-chk2 .chk-txt {
-          margin-left : 8px;
-          margin-right : 20px;
-          color : #567;
-          vertical-align : 10px;
+      margin-left : 8px;
+      margin-right : 20px;
+      color : #567;
+      vertical-align : 10px;
       }
 
-    
+      
       .opt-chk-select, .opt-chk li:hover {
-        border : 2px solid #0091D6;
-        border-radius : 8px;
-        cursor : pointer;
-        background-color : #0091D6 !important;
-        color : white;
+      border : 2px solid #0091D6;
+      border-radius : 8px;
+      cursor : pointer;
+      background-color : #0091D6 !important;
+      color : white;
       }
-
+	  
       opt-chk li:hover,  .oc2-cb {
-          cursor : pointer;
+      cursor : pointer;
       }
 
       #business .opt-chk-select {
-          border : 2px solid #0091D6;
+      border : 2px solid #0091D6;
       }
 
       .items .next, .items .prev {
-          width : 90px;
-          height : 38px;
-          background-repeat : no-repeat;
-          position : absolute;
-          top : 280px;
+      width : 90px;
+      height : 38px;
+      background-repeat : no-repeat;
+      position : absolute;
+      top : 280px;
       }
-
+	  
       .items .next {
-          background-image : url('/img/wiz_next.png');
-          right : 60px;
+      background-image : url('./img/wiz_next.png');
+      right : 60px;
       }
 
       .items .prev {
-          background-image : url('/img/wiz_back.png');
-          right : 160px;
+      background-image : url('./img/wiz_back.png');
+      right : 160px;
       }
-
+	  
       #projType {
-          margin-top : 60px;
+      margin-top : 60px;
       }
 
       #reqType {
-          margin-left : 100px !important; 
+      margin-left : 100px !important; 
       }
       #reqType li {
-          display : block;
+      display : block;
       }
 
       .p3_form_body {
-      	  display : none;
+      display : none;
+      }
+	  
+      #email-req-3-container, #email-req-4-container, #email-req-5-container {
+	  margin-left : 70px;
       }
 
-      #email-req-3-container, #email-req-4-container {
-			margin-left : 70px;
+      .notice {
+		font-size : 20px;
+      	margin-bottom : 20px;
       }
-
+	  
       
     </style>
     
@@ -177,142 +189,190 @@
             <div id="main_image" class="bkg-internal">
               <div id="section">
                 <h2 class="section-title">Digital Request Form</h2>
-	           	  <div class="scrollable" id="scrollable">
-                    <div class="items">
-                      <div id="page_1" class="si">
-                        <div class="question">1. Choose your business.</div>
-                        <div id="p1_body" class="q-body">
-                          <ul id="business" class="q-op1 opt-chk">
-                            <li id="bus-tts">TTS</li>
-                            <li id="bus-sfs">SFS</li>
-                            <li is="bus-icg">ICG</li>
+	           	<div class="scrollable" id="scrollable">
+                  <div class="items">
+                    <div id="page_1" class="si">
+                      <div class="question">1. Choose your business.</div>
+                      <div id="p1_body" class="q-body">
+                        <ul id="business" class="q-op1 opt-chk">
+                          <li id="bus-tts">TTS</li>
+                          <li id="bus-sfs">SFS</li>
+                          <li is="bus-icg">ICG</li>
+                        </ul>
+                        <ul id="projType" class="opt-chk2 toggle">
+                          <li id="new-proj"><div class="oc2-cb"></div><span class="chk-txt">Create new project.</span></li>
+                          <li id="upd-proj"><div class="oc2-cb"></div><span class="chk-txt">Update a previous project.</span></li>
+                        </ul>
+                      </div>
+                      <div id="next_1" class="next"></div>
+                    </div>
+
+                    <div id="page_2" class="si">
+                      <div class="question">2. Select a project type:</div>
+                      <div id="p2_body" class="q-body">
+                        <ul id="reqType" class="opt-chk2 toggle">
+                          <li id="email-req"><div class="oc2-cb"></div><span class="chk-txt">HTML Email</span></li>
+                          <li id="crm-email-req"><div class="oc2-cb"></div><span class="chk-txt">CRM Email</span></li>
+                          <li id="iewa-req"><div class="oc2-cb"></div><span class="chk-txt">IEWA Form/Survey</span></li>
+                          <li id="crm-req"><div class="oc2-cb"></div><span class="chk-txt">CRM Form/Survey</span></li>
+                          <li id="host-doc-req"><div class="oc2-cb"></div><span class="chk-txt">Hosting Document</span></li>
+                          <li id="webpage-req"><div class="oc2-cb"></div><span class="chk-txt">Website Page Update</span></li>
+                          <li id="mini-req"><div class="oc2-cb"></div><span class="chk-txt">Mini-Site</span></li>
+                        </ul>
+                      </div>
+                      <div id="prev_2" class="prev"></div>
+                      <div id="next_2" class="next"></div>
+                    </div>
+
+                    <div id="page_3" class="si">
+                      <div class="question">3. <span id="page_3_title"></span></div>
+                      <div id="p3_body" class="q-body">
+                        <div id="email-req-3-container" class="p3_form_body">
+                          <div class="question-med" style="margin-top:30px"> Is this internal or external?</div>
+                          <ul id="email-int-ext" class="opt-chk2 toggle">
+                            <li id="email-int"><div class="oc2-cb"></div><span class="chk-txt">Internal</span></li>
+                            <li id="email-ext"><div class="oc2-cb"></div><span class="chk-txt">External</span></li>
                           </ul>
-                          <ul id="projType" class="opt-chk2 toggle">
-                            <li id="new-proj"><div class="oc2-cb"></div><span class="chk-txt">Create new project.</span></li>
-                            <li id="upd-proj"><div class="oc2-cb"></div><span class="chk-txt">Update a previous project.</span></li>
+						  
+                          <div class="question-med" style="margin-top:40px;"> Is this a communication involving a specific product?</div>
+                          <ul id="comm-prod" class="opt-chk2 toggle">
+                            <li id="comm-prod-yes"><div class="oc2-cb"></div><span class="chk-txt">Yes</span></li>
+                            <li id="comm-prod-no" style="margin-left:25px"><div class="oc2-cb"></div><span class="chk-txt">No</span></li>
                           </ul>
-                        </div>
-                        <div id="next_1" class="next"></div>
-                      </div>
-
-                      <div id="page_2" class="si">
-                        <div class="question">2. Select a project type:</div>
-                        <div id="p2_body" class="q-body">
-                          <ul id="reqType" class="opt-chk2 toggle">
-                            <li id="email-req"><div class="oc2-cb"></div><span class="chk-txt">HTML Email</span></li>
-                            <li id="crm-email-req"><div class="oc2-cb"></div><span class="chk-txt">CRM Email</span></li>
-                            <li id="iewa-req"><div class="oc2-cb"></div><span class="chk-txt">IEWA Form/Survey</span></li>
-                            <li id="crm-req"><div class="oc2-cb"></div><span class="chk-txt">CRM Form/Survey</span></li>
-                            <li id="host-doc-req"><div class="oc2-cb"></div><span class="chk-txt">Hosting Document</span></li>
-                            <li id="webpage-req"><div class="oc2-cb"></div><span class="chk-txt">Website Page Update</span></li>
-                            <li id="mini-req"><div class="oc2-cb"></div><span class="chk-txt">Mini-Site</span></li>
-                          </ul>
-                        </div>
-                        <div id="prev_2" class="prev"></div>
-                        <div id="next_2" class="next"></div>
-                      </div>
-
-                      <div id="page_3" class="si">
-                        <div class="question">3. <span id="page_3_title"></span></div>
-                        <div id="p3_body" class="q-body">
-                          <div id="email-req-3-container" class="p3_form_body">
-                            <div class="question-med" style="margin-top:30px"> Is this internal or external?</div>
-                            <ul id="email-int-ext" class="opt-chk2 toggle">
-                              <li id="email-int"><div class="oc2-cb"></div><span class="chk-txt">Internal</span></li>
-                              <li id="email-ext"><div class="oc2-cb"></div><span class="chk-txt">External</span></li>
-                            </ul>
-  
-                            <div class="question-med" style="margin-top:40px;"> Is this a communication involving a specific product?</div>
-                            <ul id="comm-prod" class="opt-chk2 toggle">
-                              <li id="comm-prod-yes"><div class="oc2-cb"></div><span class="chk-txt">Yes</span></li>
-                              <li id="comm-prod-no" style="margin-left:25px"><div class="oc2-cb"></div><span class="chk-txt">No</span></li>
-                            </ul>
-                            
-                          </div>
-
-                          <div id="crm-email-req-3-container" class="p3_form_body">
-                            CRM EMAIL REQUEST FORM
-                          </div>
-
-                          <div id="iewa-req-3-container" class="p3_form_body">
-                            IEWA REQUEST FORM
-                          </div>
-
-                          <div id="crm-req-3-container" class="p3_form_body">
-                            CRM REQUEST FORM
-                          </div>
-                          
-                          <div id="host-doc-req-3-container" class="p3_form_body">
-                            HOST DOC REQUEST FORM
-                          </div>
-
-                          <div id="webpage-req-3-container" class="p3_form_body">
-                            WEBPAGE REQUEST FORM
-                          </div>
-
-                          <div id="mini-req-3-container" class="p3_form_body">
-                            MINI REQUEST FORM
-                          </div>
                           
                         </div>
-                        <div id="prev_3" class="prev"></div>
-                        <div id="next_3" class="next"></div>
-                      </div>
 
-
-
-                      <div id="page_4" class="si">
-                        <div class="question">4. <span id="page_4_title"></span></div>
-                        <div id="p4_body" class="q-body">
-                          <div id="email-req-4-container" class="p4_form_body" rel="">
-                            <div class="question-med"> Do you have Legal and Compliance Approval? </div>
-                            <ul id="comp-approval" class="opt-chk2 toggle">
-                              <li id="comp-approval-yes"><div class="oc2-cb"></div><span class="chk-txt">Yes</span></li>
-                              <li id="comp-approval-no"><div class="oc2-cb"></div><span class="chk-txt">No</span></li>
-                            </ul>                            
-                          </div>
-
-                          <div id="crm-email-req-4-container" class="p4_form_body">
-                            CRM EMAIL 4
-                          </div>
-
-                          <div id="iewa-req-4-container" class="p4_form_body">
-                            IEWA REQUEST 4
-                          </div>
-
-                          <div id="crm-req-4-container" class="p4_form_body">
-                            CRM REQUEST 4
-                          </div>
-                          
-                          <div id="host-doc-req-4-container" class="p4_form_body">
-                            HOST DOC REQUEST 4
-                          </div>
-
-                          <div id="webpage-req-4-container" class="p4_form_body">
-                            WEBPAGE REQUEST 4
-                          </div>
-
-                          <div id="mini-req-4-container" class="p4_form_body">
-                            MINI REQUEST FORM
-                          </div>
-                          
+                        <div id="crm-email-req-3-container" class="p3_form_body">
+                          CRM EMAIL REQUEST FORM
                         </div>
-                        <div id="prev_4" class="prev"></div>
-                        <div id="next_4" class="next"></div>
+
+                        <div id="iewa-req-3-container" class="p3_form_body">
+                          IEWA REQUEST FORM
+                        </div>
+
+                        <div id="crm-req-3-container" class="p3_form_body">
+                          CRM REQUEST FORM
+                        </div>
+                        
+                        <div id="host-doc-req-3-container" class="p3_form_body">
+                          HOST DOC REQUEST FORM
+                        </div>
+						
+                        <div id="webpage-req-3-container" class="p3_form_body">
+                          WEBPAGE REQUEST FORM
+                        </div>
+
+                        <div id="mini-req-3-container" class="p3_form_body">
+                          MINI REQUEST FORM
+                        </div>
+                        
                       </div>
-                      
-                    </div> <!-- items -->
-                  </div> <!-- scrollable -->
+                      <div id="prev_3" class="prev"></div>
+                      <div id="next_3" class="next"></div>
+                    </div>
+
+					
+
+                    <div id="page_4" class="si">
+                      <div class="question">4. <span id="page_4_title"></span></div>
+                      <div id="p4_body" class="q-body">
+                        <div id="email-req-4-container" class="p4_form_body" rel="">
+                          <div class="question-med"> Do you have Legal and Compliance Approval? </div>
+                          <ul id="comp-approval" class="opt-chk2 toggle">
+                            <li id="comp-approval-yes"><div class="oc2-cb"></div><span class="chk-txt">Yes</span></li>
+                            <li id="comp-approval-no"><div class="oc2-cb"></div><span class="chk-txt">No</span></li>
+                          </ul>                            
+                        </div>
+						
+                        <div id="crm-email-req-4-container" class="p4_form_body">
+                          CRM EMAIL 4
+                        </div>
+
+                        <div id="iewa-req-4-container" class="p4_form_body">
+                          IEWA REQUEST 4
+                        </div>
+						
+                        <div id="crm-req-4-container" class="p4_form_body">
+                          CRM REQUEST 4
+                        </div>
+                        
+                        <div id="host-doc-req-4-container" class="p4_form_body">
+                          HOST DOC REQUEST 4
+                        </div>
+						
+                        <div id="webpage-req-4-container" class="p4_form_body">
+                          WEBPAGE REQUEST 4
+                        </div>
+						
+                        <div id="mini-req-4-container" class="p4_form_body">
+                          MINI REQUEST FORM
+                        </div>
+                        
+                      </div>
+                      <div id="prev_4" class="prev"></div>
+                      <div id="next_4" class="next"></div>
+                    </div>
+
+
+                    <div id="page_5" class="si">
+                      <div class="question">5. <span id="page_5_title"></span></div>
+                      <div id="p5_body" class="q-body">
+                        <div id="email-req-5-container" class="p5_form_body" rel="">
+                          <div id="email-ca-yes">
+                            <div class="question-med">Do you have an image for the email?</div>
+                            <ul id="email-img" class="opt-chk2 toggle">
+                              <li id="email-img-yes"><div class="oc2-cb"></div><span class="chk-txt">Yes</span></li>
+                              <li id="email-img-no"><div class="oc2-cb"></div><span class="chk-txt">No</span></li>
+                            </ul>  
+                          </div>
+                          <div id="email-ca-no">
+                            <div class="notice" style="margin-top:70px;">We are sorry, but your request cannot be processed at this time. </div>
+                            Please be sure to obtain <strong>Product</strong>, <strong>Legal</strong> and <strong>Compliance</strong> approvals prior to filling out this form.
+                          </div>
+                                                    
+                        </div>
+						
+                        <div id="crm-email-req-5-container" class="p5_form_body">
+                          CRM EMAIL 5
+                        </div>
+
+                        <div id="iewa-req-5-container" class="p5_form_body">
+                          IEWA REQUEST 5
+                        </div>
+						
+                        <div id="crm-req-5-container" class="p5_form_body">
+                          CRM REQUEST 5
+                        </div>
+                        
+                        <div id="host-doc-req-5-container" class="p5_form_body">
+                          HOST DOC REQUEST 5
+                        </div>
+						
+                        <div id="webpage-req-5-container" class="p5_form_body">
+                          WEBPAGE REQUEST 5
+                        </div>
+						
+                        <div id="mini-req-5-container" class="p5_form_body">
+                          MINI REQUEST FORM
+                        </div>
+                        
+                      </div>
+                      <div id="prev_5" class="prev"></div>
+                      <div id="next_5" class="next"></div>
+                    </div>
+                    
+                  </div> <!-- items -->
+                </div> <!-- scrollable -->
 
               </div>
             </div>
 
           </div><!-- END CONTENT -->
 		</div><!-- end #contentWrap -->
-	</div><!-- end #main -->
- 
+	  </div><!-- end #main -->
+	  
       <c:import url="/stub/footer_cbc.jsp"/>
-</div><!-- end #bodyWrap -->
+	</div><!-- end #bodyWrap -->
 
-</body>
+  </body>
 </html>
